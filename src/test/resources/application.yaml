@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: test-spring-service
+
+server:
+  port: 8080
+  shutdown: graceful
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: integration-test
+
+camel:
+  component:
+    aws2-s3:
+      auto-create-bucket: true
+    aws2-sns:
+      auto-create-topic: true
+    aws2-sqs:
+      auto-create-queue: true
+
+logging:
+  level:
+    root: info
+    com:
+      arana:
+        demo: debug
+    org:
+      testcontainers: trace
+
+test-spring-service:
+  aws:
+    s3BucketName: 'demo-bucket'
+    sqsQueueName: 'demo-queue'
+    snsTopicName: 'demo-topic'

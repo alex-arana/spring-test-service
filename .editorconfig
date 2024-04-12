@@ -1,0 +1,21 @@
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+max_line_length = 150
+trim_trailing_whitespace = true
+
+[{*.kts,*.kt}]
+ij_kotlin_allow_trailing_comma = true
+ij_kotlin_allow_trailing_comma_on_call_site = false
+ij_kotlin_code_style_defaults = KOTLIN_OFFICIAL
+
+[{*.yml,*.yaml}]
+indent_size = 2
+ij_yaml_keep_indents_on_empty_lines = false
+ij_yaml_keep_line_breaks = true
+
+[{spring.schemas,spring.handlers,*.properties}]
+ij_properties_align_group_field_declarations = false
